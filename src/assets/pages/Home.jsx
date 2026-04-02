@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getCoins } from "../services/api";
+import Coin from "../components/coin";
 
 function Home() {
   const [coins, setCoins] = useState([]);
@@ -18,7 +19,7 @@ function Home() {
       <h1>Crypto Dashboard</h1>
 
       {coins.map((coin) => (
-        <p key={coin.id}>{coin.name}</p>
+        <Coin key={coin.id} coin={coin} />
       ))}
     </div>
   );
