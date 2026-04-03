@@ -19,7 +19,7 @@ function Coin({ coin, toggleFavorite, favorites }) {
           Verandering:{" "}
           {coin.price_change_percentage_24h?.toFixed(2)}%
         </p>
-        <button onClick={() => toggleFavorite(coin.id)}>
+        <button onClick={(e) => {e.preventDefault();e.stopPropagation();toggleFavorite(coin.id);}}>
           {isFavorite ? "★" : "☆"}
         </button>
       </div>
