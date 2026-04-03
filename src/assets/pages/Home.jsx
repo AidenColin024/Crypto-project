@@ -7,10 +7,19 @@ import "./home.css";
 function Home() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
+  const [favorites, setFavorites] = useState([]);
 
   const filteredCoins = coins.filter((coin) =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
+
+  const toggleFavorite = (coinId) => {
+    if (favorites.includes(coinId)) {
+      setFavorites(favorites.filter((id) => id !== coinId));
+    } else {
+      setFavorites([...favorites, coinId]);
+    }
+  };
 
   useEffect(() => {
     loadCoins();
