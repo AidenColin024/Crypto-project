@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
-function Coin({ coin }) {
+function Coin({ coin, toggleFavorite, favorites }) {
+  const isFavorite = favorites.includes(coin.id);
+
   return (
     <Link to={`/coin/${coin.id}`}>
       <div
@@ -17,6 +19,9 @@ function Coin({ coin }) {
           Verandering:{" "}
           {coin.price_change_percentage_24h?.toFixed(2)}%
         </p>
+        <button onClick={() => toggleFavorite(coin.id)}>
+          {isFavorite ? "★" : "☆"}
+        </button>
       </div>
     </Link>
   );

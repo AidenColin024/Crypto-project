@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { getCoins } from "../services/api";
-import Coin from "../components/coin";
-import SearchBar from "../components/searchbar";
-import "./home.css";
+import Coin from "../components/Coin";
+import SearchBar from "../components/Searchbar";
+import "./Home.css";
+import Favorites from "../components/Favorites";
 
 function Home() {
   const [coins, setCoins] = useState([]);
@@ -35,10 +36,11 @@ function Home() {
       <h1>Crypto Dashboard</h1>
 
       <SearchBar setSearch={setSearch} />
+      <Favorites coins={coins} favorites={favorites} />
 
       <div className="coin-list">
         {filteredCoins.map((coin) => (
-          <Coin key={coin.id} coin={coin} />
+          <Coin key={coin.id} coin={coin} toggleFavorite={toggleFavorite} favorites={favorites} />
         ))}
       </div>
     </div>
