@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCoins } from "../services/api";
 import Coin from "../components/coin";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../components/searchbar";
 import "./home.css";
 
 function Home() {
