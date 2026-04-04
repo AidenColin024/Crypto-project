@@ -6,6 +6,11 @@ import "./Home.css";
 import Favorites from "../components/Favorites";
 import Coinlist from "../components/Coinlist";
 import MarketChard from "../components/marketchard";
+import "../components/coin.css";
+import "../components/Favorites.css";
+import "../components/marketchard.css";
+import "../components/Searchbar.css";
+
 function Home() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");

@@ -1,10 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./detail.css";
+import { useNavigate } from "react-router-dom";
 
 function Detail() {
   const { id } = useParams();
   const [coin, setCoin] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`https://api.coingecko.com/api/v3/coins/${id}`)
@@ -22,6 +24,7 @@ function Detail() {
       <p>Market cap: {coin.market_data.market_cap.eur}</p>
       <p>Volume: {coin.market_data.total_volume.eur}</p>
       <p>Rank: {coin.market_cap_rank}</p>
+      <button onClick={() => navigate(-1)}>Terug</button>
     </div>
   );
 }
