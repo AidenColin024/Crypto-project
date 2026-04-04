@@ -4,6 +4,7 @@ import Coin from "../components/Coin";
 import SearchBar from "../components/Searchbar";
 import "./Home.css";
 import Favorites from "../components/Favorites";
+import Coinlist from "../components/Coinlist";
 
 function Home() {
   const [coins, setCoins] = useState([]);
@@ -39,9 +40,7 @@ function Home() {
       <Favorites coins={coins} favorites={favorites} />
 
       <div className="coin-list">
-        {filteredCoins.map((coin) => (
-          <Coin key={coin.id} coin={coin} toggleFavorite={toggleFavorite} favorites={favorites} />
-        ))}
+        <Coinlist coins={filteredCoins} toggleFavorite={toggleFavorite} favorites={favorites} />
       </div>
     </div>
   );
