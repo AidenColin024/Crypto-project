@@ -5,7 +5,7 @@ import SearchBar from "../components/Searchbar";
 import "./Home.css";
 import Favorites from "../components/Favorites";
 import Coinlist from "../components/Coinlist";
-
+import MarketChard from "../components/marketchard";
 function Home() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
@@ -38,6 +38,7 @@ function Home() {
 
       <SearchBar setSearch={setSearch} />
       <Favorites coins={coins} favorites={favorites} />
+      <MarketChard coins={coins} />
 
       <div className="coin-list">
         <Coinlist coins={filteredCoins} toggleFavorite={toggleFavorite} favorites={favorites} />
