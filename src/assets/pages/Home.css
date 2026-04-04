@@ -1,0 +1,24 @@
+.container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.coin-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Extra */
+.container input {
+  padding: 10px;
+  margin: 15px;
+  width: 200px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}

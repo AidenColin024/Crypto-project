@@ -1,0 +1,13 @@
+.favorites {
+  margin: 20px;
+  padding: 10px;
+  border-top: 2px solid gray;
+}
+
+.favorites h2 {
+  margin-bottom: 10px;
+}
+
+.favorites p {
+  margin: 5px 0;
+}
