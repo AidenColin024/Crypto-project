@@ -1,4 +1,6 @@
 function SearchBar({ setSearch }) {
+  // render de searchbar
+  // onChange zorgt ervoor dat de search state wordt bijgewerkt als de gebruiker iets typt
   return (
     <input
       type="text"

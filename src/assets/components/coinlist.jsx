@@ -1,5 +1,5 @@
 import Coin from "./Coin";
-
+// Coinlist component die een lijst van coins rendert
 function Coinlist({ coins, toggleFavorite, favorites }) {
   return (
     <div>
