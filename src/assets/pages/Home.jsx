@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { getCoins } from "../services/api";
 import Coin from "../components/Coin";
-import SearchBar from "../components/Searchbar";
+import SearchBar from "../components/searchbar";
 import "./Home.css";
 import Favorites from "../components/Favorites";
 import Coinlist from "../components/Coinlist";
