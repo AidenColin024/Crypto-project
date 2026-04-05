@@ -8,9 +8,8 @@ import Coinlist from "../components/Coinlist";
 import MarketChard from "../components/marketchard";
 import "../components/coin.css";
 import "../components/Favorites.css";
-import "../components/marketchard.css";
+import "../components/Marketchard.css";
 import "../components/Searchbar.css";
-
 function Home() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
@@ -43,7 +42,9 @@ function Home() {
 
       <SearchBar setSearch={setSearch} />
       <Favorites coins={coins} favorites={favorites} />
-      <MarketChard coins={coins} />
+      <div class="marketchard">
+        <MarketChard coins={coins} />
+      </div>
 
       <div className="coin-list">
         <Coinlist coins={filteredCoins} toggleFavorite={toggleFavorite} favorites={favorites} />
