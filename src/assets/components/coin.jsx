@@ -23,7 +23,7 @@ function Coin({ coin, toggleFavorite, favorites }) {
         </p>
         {/* zorgt ervoor dat je niet naar details gaat als je op de ster klikt */}
         <button onClick={(e) => {e.preventDefault();e.stopPropagation();toggleFavorite(coin.id);}}>
-          {isFavorite ? "★" : "☆"}
+          {isFavorite ? "Verwijder favoriet" : "Voeg toe aan favorieten"}
         </button>
       </div>
     </Link>
