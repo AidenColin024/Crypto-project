@@ -18,7 +18,7 @@ function MarketChard({ coins }) {
           nameKey="name"
           cx="50%"
           cy="50%"
-          outerRadius={250}
+          outerRadius={150}
           label={({ name }) => name}
         >{/* map de coins naar cellen met de bijbehorende kleuren */}
           {coins.slice(0, 10).map((_, index) => (
